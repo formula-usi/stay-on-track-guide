@@ -180,7 +180,7 @@ We recommend to **leave all the screens connected** and to ease the startup on t
 Check if the battery are charged, try to change them and, eventually, try another car.
 
 ### The battery of the car is empty
-Switch off the car and put it to charge. Turn on another car and restart the self driving model as explained.
+Switch off the car and put it to charge. Turn on another car and restart the self driving model following the daily operation procedure.
 
 ### The changes on Path-ological are not propagated to laptop #2 (dashboard and drive interface)
 Check if there is an active `SSH` session between laptop #1 and the car. If not, run the follwing command from Terminal:
@@ -188,8 +188,22 @@ Check if there is an active `SSH` session between laptop #1 and the car. If not,
 ssh piracerpro-x
 ```
 
+### You receive an error while trying to start the SSH connection
+If you receive errors such as `bind [127.0.0.1]:8887: Address already in use` when you try to establish an SSH connection in the Terminal from one of the laptops and one of the cars, please run the following two commands (one at a time) and try again:
+
+``` bash
+lsof -ti:8886 | xargs kill -9
+lsof -ti:8887 | xargs kill -9
+```
+
 ### The self-driving car does not drive well
-It is possible that, after several crashes, the car is damaged. In this case, change the car with another one and contact us to return the damaged car, receiveing a new one as backup.
+There are two main reasons:
+1. There is too much light. Ensure the lights of the Phänomena pavilion are set to 8.
+2. The car could be damaged after several strong crashes. In this case, change the car with another one and contact us to return the damaged car, receiveing a new one as backup.
+
+<p align="center">
+  <img src="images/pavilion-lights.png" alt="Recommended Settings for Pavilion Lights" width="500px"/> 
+</p>
 
 ### After an accident, one of the car's front steering arm fell off
 Stop the car (set `Mode: User` in the drive interface) and reinstall the steering arm as follows:
