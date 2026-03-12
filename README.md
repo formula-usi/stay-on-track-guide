@@ -44,15 +44,8 @@ This guide will be structured as follows: The first part covers the [Daily Usage
 4. Configure the Built-in Display as `Mirror for PLT4339U`
 5. Configure the beamer (PT-REQ12EJ) as  `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 6. ⚠️ **Ensure that in the Settings of the [Touch-Up](https://github.com/shueber/Touch-Up) driver `Send mouse events to` is set to `PLT4339U`**
-7. To ensure that your mouse moves correctly between monitors, it is recommended to rearrange the position of your screens. To do so, click on the "Arrange" button (in "Displays" settings) and adjust the virtual display position to match your desired setup. Below you can find the recommended arrangement
-<p align="center">
-  <img src="images/laptop1-screen_config_arrange.png" alt="Recommended Screen Layout for Laptop #1" width="500px"/>
-</p>
-
-<!--
-6. Below you can find the recommended settings for each of the screens
-![laptop1-screen_config](images/laptop1-screen_config.png)
--->
+7. To ensure that your mouse moves correctly between monitors, it is recommended to rearrange the position of your screens. To do so, click on the "Arrange" button (in "Displays" settings) and adjust the virtual display position to match your desired setup. Below you can find the recommended settings and arrangement
+![laptop1-screen_config](images/laptop1-screen_config-mirror.png)
 
 ### Laptop #2 (Pit-stop)
 1. This laptop should have the following connection:
