@@ -40,9 +40,9 @@ This guide will be structured as follows: The first part covers the [Daily Usage
   - USB-C to connect the touch interface to the touchscreen 
 ![laptop1-connections](images/laptop1-connections.png)
 2. Open [System Settings](https://support.apple.com/en-gb/guide/imac/apda966cb8af/mac) and navigate to "Displays" settings
-3. Configure the touchscreen (PLT4339U) as `Main Display` as "Extended Screen" following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
+3. Configure the touchscreen (PLT4339U) as `Main Display` as `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 4. Configure the Built-in Display as `Mirror for PLT4339U`
-5. Configure the beamer (PT-REQ12EJ) as  "Extended Screen" following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
+5. Configure the beamer (PT-REQ12EJ) as  `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 6. ⚠️ **Ensure that in the Settings of the [Touch-Up](https://github.com/shueber/Touch-Up) driver `Send mouse events to` is set to `PLT4339U`**
 7. To ensure that your mouse moves correctly between monitors, it is recommended to rearrange the position of your screens. To do so, click on the "Arrange" button (in "Displays" settings) and adjust the virtual display position to match your desired setup. Below you can find the recommended arrangement
 <p align="center">
@@ -58,7 +58,7 @@ This guide will be structured as follows: The first part covers the [Daily Usage
 1. This laptop should have the following connection:
   - HDMI to connect the screen mounted on the side of the structure (extended screen)
 2. Open [System Settings](https://support.apple.com/en-gb/guide/imac/apda966cb8af/mac) and navigate to "Displays" settings
-3. Configure the screen as "Extended Screens" following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
+3. Configure the screen as `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 4. To ensure that your mouse moves correctly between monitors, it is recommended to rearrange the position of your screens. To do so, click on the "Arrange" button (in "Displays" settings) and adjust the virtual display position to match your desired setup
 
 <!--
