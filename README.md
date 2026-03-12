@@ -19,7 +19,7 @@ This guide will be structured as follows: The first part covers the [Daily Usage
 3. Wait until the small on-board OLED display on the car turns on
 4. Check if the battery is full (100%)
 
-   <img src="images/oled_display_battery.png" alt="On-board OLED and Battery %" width="350px"/>
+   <img src="images/oled_display_battery.jpg" alt="On-board OLED and Battery %" width="350px"/>
 
 5. If so, put the car on the raised wooden floor
 7. Otherwise, turn off the car, put it under charge, and select a car with full battery
@@ -28,7 +28,7 @@ This guide will be structured as follows: The first part covers the [Daily Usage
 1. Ensure that both laptops (#1 and #2) are connected to the power outlets (otherwise connect them)
 2. Use the `formulausi` account with the password: `phaenomena2026!`
 3. Ensure the Google Chrome option `View > Always Show Toolbar in Full Screen` is disabled
-   <img src="images/chrome-always_show_toolbar_fullscreen.png" alt="Google Chrome – View > Always Show Toolbar in Full Screen" width="300px"/>
+   <img src="images/chrome-always_show_toolbar_fullscreen.jpg" alt="Google Chrome – View > Always Show Toolbar in Full Screen" width="300px"/>
 5. Refer to the following section to configure the screens on the two laptops
 
 ### Configuration of the screens
@@ -38,14 +38,14 @@ This guide will be structured as follows: The first part covers the [Daily Usage
   - USB-C (with HDMI adapter) to connect the beamer (extended screen)
   - HDMI to connect the video to the touchscreen (extended or mirrored screen)
   - USB-C to connect the touch interface to the touchscreen 
-![laptop1-connections](images/laptop1-connections.png)
+![laptop1-connections](images/laptop1-connections.jpg)
 2. Open [System Settings](https://support.apple.com/en-gb/guide/imac/apda966cb8af/mac) and navigate to "Displays" settings
 3. Configure the touchscreen (PLT4339U) as `Main Display` as `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 4. Configure the Built-in Display as `Mirror for PLT4339U`
 5. Configure the beamer (PT-REQ12EJ) as  `Extended Screen` following [this guide](https://support.apple.com/en-is/guide/mac-help/mchlb5f905a1/mac)
 6. ⚠️ **Ensure that in the Settings of the [Touch-Up](https://github.com/shueber/Touch-Up) driver `Send mouse events to` is set to `PLT4339U`**
 7. To ensure that your mouse moves correctly between monitors, it is recommended to rearrange the position of your screens. To do so, click on the "Arrange" button (in "Displays" settings) and adjust the virtual display position to match your desired setup. Below you can find the recommended settings and arrangement
-![laptop1-screen_config](images/laptop1-screen_config-mirror.png)
+![laptop1-screen_config](images/laptop1-screen_config-mirror.jpg)
 
 ### Laptop #2 (Pit-stop)
 1. This laptop should have the following connection:
@@ -64,7 +64,7 @@ This guide will be structured as follows: The first part covers the [Daily Usage
 To enable touchscreen interactivity with MacOS, we installed the [Touch-Up](https://github.com/shueber/Touch-Up) driver. Please ensure the configuration of the driver are as follows: 
 
 <p align="center">
-  <img src="images/touch_up_settings.png" alt="Recommended Touch-Up Settings" width="600px"/> 
+  <img src="images/touch_up_settings.jpg" alt="Recommended Touch-Up Settings" width="600px"/> 
 </p>
 
 ### Cables
@@ -130,11 +130,11 @@ python manage.py drive --model models/MODEL_NAME.pt
 5. Move the cockpit on the display mounted on the side of the wooden structure that holds the beamer
 6. On the drive interface set the `(M)ode` to `Full (A)uto`:
 
-<img src="images/full_auto.png" alt="Full Auto Mode" width="400px"/>
+<img src="images/full_auto.jpg" alt="Full Auto Mode" width="400px"/>
 
 8. Slowly move the `AI multiplier` (which is initially set to 0.00) to values close to 1.00 (not less than 0.85). You might need to change this value after a few hours of operation, when the battery of the cars goes down (i.e., lower the battery, higher the multiplier).
 
-<img src="images/multiplier.png" alt="AI Multiplier" width="400px"/>
+<img src="images/multiplier.jpg" alt="AI Multiplier" width="400px"/>
 
 In case you want to stop the car, you can move back the `AI multiplier` to 0.00 or set the `(M)ode` to `(U)ser`
 
@@ -142,7 +142,7 @@ When you change the circuit and the scenario (i.e., surface and weather) on Path
 
 You can test the connection by changing the circuit, save it, and observing if there are changes in Circuit, Weather and Minimap:
 
-<img src="images/minimap.png" alt="Circuit, Weather, and Minimap" width="400px"/>
+<img src="images/minimap.jpg" alt="Circuit, Weather, and Minimap" width="400px"/>
 
 ## End of the day
 
@@ -202,7 +202,7 @@ There are two main reasons:
 2. The car could be damaged after several strong crashes. In this case, change the car with another one and contact us to return the damaged car, receiveing a new one as backup.
 
 <p align="center">
-  <img src="images/pavilion-lights.png" alt="Recommended Settings for Pavilion Lights" width="500px"/> 
+  <img src="images/pavilion-lights.jpg" alt="Recommended Settings for Pavilion Lights" width="500px"/> 
 </p>
 
 ### After an accident, one of the car's front steering arm fell off
@@ -212,7 +212,7 @@ Stop the car (set `Mode: User` in the drive interface) and reinstall the steerin
 3. Insert the steering arm on the side of the wheel
 4. Gently turn the genlty turn the front wheel inward
 
-![fix_steering_arm](images/fix_steering_arm.png)
+![fix_steering_arm](images/fix_steering_arm.jpg)
 
 ### The car unexpectedly shut down
 During the exhibition, the car may occasionally shut down unexpectedly. This typically happens due to overheating of the Raspberry Pi unit.
@@ -263,7 +263,7 @@ During the training phase, we drove the car for ~30 minutes using a PS4 Joystick
 For example, you can imagine that when the road in front of the car is completely straight, the Picture contains a straight road, the Throttle command will be 1.0 (full speed), and the Steering angle will be 0.0 (the car will go straight).
 When the road in front of the car presents a curve to the left, the Picture contains this curve, the Throttle command will be lower than 1.0 (not full speed when you have to turn), and the Steering angle will be lower than 0 (the car will turn left).
 
-![throttle_example](images/throttle_example.png)
+![throttle_example](images/throttle_example.jpg)
 
 Once we collected all the data, we trained the AI model using a mathematical optimization algorithm named **Backpropagation**. Basically, the model learns, given the image, to predict the Throttle and the Steering Angle that the driver used at the moment the input picture was taken. Initially, it predicts the values randomly, but during the process, it becomes more and more precise. Once it has learned to predict these values with good performance, it has essentially learned how to drive.
 
