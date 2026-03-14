@@ -177,10 +177,13 @@ We recommend to **leave all the screens connected** and to ease the startup on t
 ## Troubleshooting
 
 ### The car does not switch on
-Check if the battery are charged, try to change them and, eventually, try another car.
+Check if the battery are charged, try to change them and, eventually, try another car. Remember to always put the cars under charge when they are not used.
 
 ### The battery of the car is empty
 Switch off the car and put it to charge. Turn on another car and restart the self driving model following the daily operation procedure.
+
+### The car continuously goes out and hits
+This can happen because the circuit is too hard; change it to a simpler one.
 
 ### The changes on Path-ological are not propagated to laptop #2 (dashboard and drive interface)
 Check if there is an active `SSH` session between laptop #1 and the car. If not, run the follwing command from Terminal:
@@ -205,6 +208,17 @@ There are two main reasons:
   <img src="images/pavilion-lights.jpg" alt="Recommended Settings for Pavilion Lights" width="500px"/> 
 </p>
 
+<p align="center">
+  <img src="images/paraluce.jpg" alt="Curtains used to prevent lights from other exhibitions width="500px"/> 
+</p>
+
+### The car is stopped/stuck
+This happens because of many updates queued for the car.
+Simply move the AI multiplier on the Driving Interface to values higher than 1 (e.g., 1.10) until it starts to move, then move it back to 1.
+<p align="center">
+  <img src="images/multiplier.jpg" alt="AI Multiplier bar" width="500px"/> 
+</p>
+
 ### After an accident, one of the car's front steering arm fell off
 Stop the car (set `Mode: User` in the drive interface) and reinstall the steering arm as follows:
 1. Gently turn the genlty turn the front wheel outward
@@ -222,6 +236,24 @@ If this occurs, the solution is straightforward:
 2. After the reboot, restart all the connections **from both laptops**, following the procedure described in the guide.
 
 This issue often occurs when the car is powered on but remains stationary for too long. To reduce the risk of overheating, it is recommended to let the car running for at least 5–10 minutes every hour.
+
+
+### Path-ological touch screen is out of sync with the beamer (random updates not synchronized)
+Restart the Path-Ological application, closing the terminal running it, open a new one, and run:
+```bash
+pnpm run dev
+```
+### Localhost address does not work
+It is possible that another SSH session remained active and it generates conflicts. You can use an alternative page that is presented in the terminal while you are running the car. The address is
+``` bash
+piracer-x.local:8887
+```
+
+### Cannot refresh the cockpit
+You can use the refresh all extension of Chrome to refresh also the pages that are in other screens, like the cockpit.
+<p align="center">
+  <img src="images/refresh-all.jpg" alt="Refresh all button" width="500px"/> 
+</p>
 
 <!-- 
 ### Python Errors while running the model
@@ -245,7 +277,7 @@ donkey createcar --path ~/piracerpro
 
 ## Q & A
 
-### Who built the exhibition? What hadrware is used?
+### Who built the exhibition? What hardware is used?
 
 This exhibition is born as a spin-off of [#FormulaUSI](http://formulausi.si.usi.ch/), an autonomous self-driving car competition organized by the [Software Institute](https://si.usi.ch/) — [USI, Lugano](https://www.usi.ch/) in 2021 and 2022. 
 
@@ -254,6 +286,12 @@ The software that runs the autonomous driving is a [fork](https://github.com/for
 The cars are [Waveshare PiRacer Pro](https://www.waveshare.com/piracer-pro-ai-kit.htm) — general purpose scale cars equipped with a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/), a tiny computer. 
 
 This project is funded by the [SNSF Agora](https://www.snf.ch/en/JnT2xEAERCgO8qQc/funding/science-communication/agora) project entitled ["Self-Driving Cars on Interactive Dynamic Tracks: An Exhibition at Phänomena 2026"](https://data.snf.ch/grants/grant/232355) obtained by Dr. Roberto Minelli and Prof. Paolo Tonella.
+
+
+### What is the purpose of the Exhibition?
+In our research, we work in AI testing. This is an autonomous driving simulator in which we show how to test AI driven cars in extreme condition (unseen circuits, circuits that change, extreme weather,...). This represent a testing scenario in which we show the potential and the limits of the AI in this field: how far can you push it?
+
+
 
 ### How the AI model works?
 The AI model here is a Neural Network (more specifically, a **Convolutional Neural Network**, abbreviated as **CNN**) that is trained using the paradigm of **Imitation Learning**.
@@ -286,7 +324,7 @@ To prevent overfitting, we kept part of the collected data hidden and used it at
 
 
 ### Why is the car, sometimes, struggling to drive?
-See the previous answer: if the circuit is very unusual or far from what the car has seen during training, it is possible that it may collide or make an incorrect decision.
+See the previous answer: if the circuit is very unusual or far from what the car has seen during training, it is possible that it may collide or make an incorrect decision. This is also related to the testing purpose of the exhibition, which wants to show the limits and the potentials of AI in autonomous driving.
 
 ### How do the different weathers work?
 Since we cannot physically put ice and water on the circuit, we simulated these conditions by limiting the car's control under such scenarios. More specifically, we applied noise to the images so that the camera appears dirty or icy, and we added uncontrollable noise to the Steering Angle and Throttle, making the car unable to steer, accelerate, or decelerate perfectly. The noise is stronger under icy conditions.  
