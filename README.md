@@ -9,7 +9,13 @@ This is the **short guide** for the daily operation of the Stay on Track install
 2. Turn on the touchscreen using its remote (Iiyama)
 3. Turn on the display mounted on the side of the wooden structure that holds the beamer (Samsung)
 4. Refer to the [full guide](https://github.com/formula-usi/stay-on-track-guide/blob/main/Full-Guide.md) if the screens are not configured correctly (e.g., you do not see the circuit projected on the floor, you do not see the circuit editor on the touchscreen display, you do not see the dashboard on the side mounted display)
-5. Go to the next section and start a new car
+5. Ensure that both laptops are connected to the power outlets (otherwise connect them)
+6. Use the `formulausi` account with the password: `phaenomena2026!`
+7. ⚠️ **Ensure that the circuit editor application (Path-ological) is running on Laptop #1**. If not, open a Terminal on Laptop #1 and run the following command:
+```bash
+pnpm run dev
+```
+7. Go to the next section and start a new car
 
 ## Starting a new car
 1. Choose one of the cars, i.e., `piracer-x`
